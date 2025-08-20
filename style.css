@@ -1,0 +1,312 @@
+ /* ====== Reset & base ====== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; background: #121212; color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #ff6f91;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #ff6f91;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #ff3c6e;
+    }
+
+    /* ====== Header ====== */
+    header {
+      background: #1f1f1f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #ff6f91;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0; padding: 0;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li:hover {
+      color: #ff3c6e;
+    }
+
+    /* ====== Hero Banner ====== */
+    #hero {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 40px #ff6f9180;
+    }
+    #hero .carousel {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.7s ease-in-out;
+    }
+    #hero .slide {
+      flex: 1 0 100%;
+      position: relative;
+      cursor: pointer;
+    }
+    #hero img {
+      width: 100%;
+      height: 100%;
+      object-fit : fill ;
+      filter: brightness(0.5);
+      border-radius: 12px;
+    }
+    #hero .slide .text-overlay {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      color: white;
+      max-width: 50%;
+      user-select: none;
+    }
+    #hero .slide .text-overlay h1 {
+      font-size: 2.8rem;
+      margin: 0 0 0.5rem;
+      text-shadow: 0 0 12px rgba(0,0,0,0.7);
+    }
+    #hero .slide .text-overlay p {
+      font-size: 1.2rem;
+      text-shadow: 0 0 8px rgba(0,0,0,0.5);
+    }
+
+    /* ====== Search ====== */
+    #search-bar {
+      max-width: 1200px;
+      margin: 2rem auto 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    #search-input {
+      width: 300px;
+      max-width: 90vw;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+    }
+    #search-button {
+      min-width: 90px;
+    }
+
+    /* ====== Movie Listing ====== */
+    #movies {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+    #movies h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 1.2px;
+    }
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.2rem;
+    }
+    .movie-card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #ff6f91aa;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #ff3c6eff;
+    }
+    .movie-poster {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #ff6f91;
+    }
+    .movie-info {
+      padding: 0.8rem 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .movie-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #ff6f91;
+      letter-spacing: 0.5px;
+    }
+    .movie-year {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    #no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: #ff6f91;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    /* ====== FAQ Section ====== */
+    #faq {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    #faq h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      letter-spacing: 1.1px;
+    }
+    .faq-item {
+      background: #222;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 0 15px #ff6f9140;
+    }
+    .faq-question {
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+      user-select: none;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+      color: #ff6f91;
+    }
+    .faq-question.active::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      background: #111;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .faq-answer.open {
+      padding: 1rem 1.5rem;
+      max-height: 400px;
+    }
+
+    /* ====== Subscription Form ====== */
+    #subscribe {
+      background: #1f1f1f;
+      max-width: 600px;
+      margin: 3rem auto 4rem;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 40px #ff6f9180;
+    }
+    #subscribe h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    #subscribe form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    #subscribe input[type="email"] {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      flex-grow: 1;
+      min-width: 220px;
+      max-width: 100%;
+    }
+    #subscribe button {
+      min-width: 120px;
+      font-weight: 700;
+    }
+    #subscribe-message {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #ff6f91;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      background: #1f1f1f;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
+      margin-top: auto;
+    }
+    footer a {
+      color: #ff6f91;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 650px) {
+      #hero .slide .text-overlay h1 {
+        font-size: 1.8rem;
+      }
+      #hero .slide .text-overlay p {
+        font-size: 1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sapphire - Movie Streaming Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Sapphire</div>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Movies</li>
+      <li>FAQ</li>
+      <li>Subscribe</li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero" aria-label="Featured movies carousel">
+  <div class="carousel" role="list">
+    <div class="slide" role="listitem" tabindex="0">
+      <img src="https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" alt="Interstellar movie poster" />
+      <div class="text-overlay">
+        <h1>Interstellar</h1>
+        <p>Explore distant worlds through space and time.</p>
+      </div>
+    </div>
+    <div class="slide" role="listitem" tabindex="0">
+      <img src="https://image.tmdb.org/t/p/w1280/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight movie poster" />
+      <div class="text-overlay">
+        <h1>The Dark Knight</h1>
+        <p>A gritty battle between chaos and justice.</p>
+      </div>
+    </div>
+    <div class="slide" role="listitem" tabindex="0">
+      <img src="https://th.bing.com/th/id/R.1d377c899174866dc720beb881a18b80?rik=m8RzIpPn1lesVw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f0%2f6%2f4%2f1109774-inception-wallpaper-1920x1080-computer.jpg&ehk=YU9LveEaKEjJRnwt5uly%2fH2gAXwu7eHqq8%2b%2fw0pZTvA%3d&risl=&pid=ImgRaw&r=0" alt="Inception movie poster" />
+      <div class="text-overlay">
+        <h1>Inception</h1>
+        <p>Enter the dream world to steal secrets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Search Bar -->
+ 
+<div id="search-bar">
+  <input type="text" id="search-input" placeholder="Search movies by title..." aria-label="Search movies" />
+  <button id="search-button" aria-label="Search movies">Search</button>
+</div>
+<!-- Movies Section -->
+ <section id="movies" aria-live="polite" aria-atomic="true">
+  <h2>Movies</h2>
+  <div class="movie-grid" id="movie-grid"> -->
+    <!-- Movie cards inserted dynamically here -->
+   </div>
+</section>
+
+<!-- FAQ Section -->
+ <section id="faq" aria-label="Frequently Asked Questions">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-question" tabindex="0">How can I subscribe?</div>
+    <div class="faq-answer">Simply enter your email in the subscription form below and hit subscribe.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question" tabindex="0">Can I watch offline?</div>
+    <div class="faq-answer">Currently, offline viewing is not supported.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question" tabindex="0">What devices are supported?</div>
+    <div class="faq-answer">Sapphire works on all major devices including phones, tablets, laptops, and smart TVs.</div>
+  </div>
+</section> 
+
+<!-- Subscription Form -->
+ <section id="subscribe" aria-label="Subscribe to newsletter">
+  <h2>Subscribe to watch latest movies!</h2>
+  <form id="subscribe-form">
+    <input type="email" id="email-input" placeholder="Enter your email" aria-label="Email address" required />
+    <button type="submit">Subscribe</button>
+  </form>
+  <div id="subscribe-message" role="alert" aria-live="polite"></div>
+</section>
+
+<footer>
+  &copy; 2025 Sapphire.| <a href="#">Privacy Policy</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html> 
+
